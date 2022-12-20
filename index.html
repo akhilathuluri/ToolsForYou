@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/icons8-tools-32.png">
+    <script src="https://kit.fontawesome.com/3da1a747b2.js" crossorigin="anonymous"></script>
+    <title>Tools For You</title>
+</head>
+<body>
+    <section class="showcase">
+        <header>
+            <h1 class="logo">ToolsForYou</h1>
+            <div class="toggle"></div>
+        </header>
+
+        <video src="videos/vecteezy_geography-earthmap-digital-global-world-map-and-ransomware-red-alear-detected-elements-of-this-image-furnished-by-nasa_2015580 (1).mp4" muted loop autoplay></video>
+
+        <div class="overlay"></div>
+
+        <div class="text">
+            <h2>Generate</h2>
+            <h2><span class="auto">Random Password</span></h2>
+            <!--<h2></h2>-->
+            <p>Hii All You Can Get Some Of The Useful Tools For You Like Age Calculator,Know Your Location,RandomPasswordGenerator etc.,Definitely You Will Like This Page. The New Tools Will Be Added Soon</p>
+            <!--<a href="#">Get Started</a>-->
+            <button id="openModal">Get Started!</button>
+
+            <div class="modal" id="modal">
+                <div class="modal-inner">
+                    <h2 style="font-size: large; color: black;">Tools For You!</h2>
+                    <p>
+                        <a href="password.html">Password Generator</a>
+                        <a href="knowlocation.html">know Your Location</a>
+                        <a href="texttospeech.html">Text To Speech</a>
+                    </p>
+                    <button id="closeModal">Close</button>
+                </div>
+            </div>
+    </section>
+
+
+
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="password.html">Password Generator</a></li>
+            <li><a href="texttospeech.html">Text To Speech</a></li>
+            <li><a href="knowlocation.html">Know Your Location</a></li>
+            <li><a href="https://akhilathuluri.github.io/akhilathuluri/">About</a></li>
+        </ul>
+    </div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+<script src="index.js"></script>
+<script>
+    const menuToggle = document.querySelector('.toggle')
+    const showcase = document.querySelector('.showcase')
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+    })
+
+    var typed = new Typed(".auto", {
+          strings: ["Random Password", "Know Your Location", "Text To Speech"],
+          typeSpeed: 75,
+          backSpeed: 100,
+          loop: true,
+        });
+</script>
+</body>
+</html>

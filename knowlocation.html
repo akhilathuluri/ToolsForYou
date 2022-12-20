@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="knowlocation.css">
+    <link rel="icon" href="images/map.png">
+    <title>Get Location</title>
+</head>
+<body onload="getLocation()">
+    
+    <section class="showcase">
+    <header>
+        <h2 class="logo">KnowYourLocation</h2>
+        <div class="toggle"></div>
+    </header>
+
+    <video src="videos/VID_20220916_090627_199.mp4" muted loop autoplay></video>
+
+    <div class="overlay"></div>
+
+    <div class="text">
+        <h2>Get Your <span class="auto"></span>Location</h2>
+        <h3 id="demo1"></h3>
+        <p id="demo"></p>
+    </div>
+</section>
+
+<div class="menu">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="password.html">Password Generator</a></li>
+        <li><a href="texttospeech.html">Text To Speech</a></li>
+        <li><a href="knowlocation.html">Know Your Location</a></li>
+        <li><a href="https://akhilathuluri.github.io/akhilathuluri/">About</a></li>
+    </ul>
+</div>
+    
+<script>
+    let agent = navigator.userAgent;
+    document.getElementById("demo").innerHTML = "User-agent:<br>" + agent;
+    
+    const menuToggle = document.querySelector('.toggle')
+    const showcase = document.querySelector('.showcase')
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+    })
+
+    var x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function showPosition(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+
+</script>
+</body>
+</html>

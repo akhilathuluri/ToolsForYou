@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="texttospeech.css">
+    <link rel="icon" href="images/text-to-speech.png">
+    <title>Text To Speech</title>
+</head>
+<body>
+    <body>
+        <section class="showcase">
+            <header>
+                <h1 class="logo">TextToSpeech</h1>
+                <div class="toggle"></div>
+            </header>
+    
+            <video src="videos/VID_20220916_090448_554.mp4" muted loop autoplay></video>
+    
+            <div class="overlay"></div>
+    
+                <div class="container">
+                    <h1 class="heading">TextToSpeech</h1>
+
+                    <div class="box">
+                        <label>Enter Text</label>
+                        <textarea id="text"></textarea>
+                    </div>
+
+                    <div class="box">
+                        <label>Select Voice Type</label>
+                        <select id="voiceList"></select>
+                        
+                    </div>
+                    <button id="speak">Convert To Speech</button>
+                </div>
+        </section>
+    
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="password.html">Password Generator</a></li>
+                <li><a href="texttospeech.html">Text To Speech</a></li>
+                <li><a href="knowlocation.html">Know Your Location</a></li>
+                <li><a href="https://akhilathuluri.github.io/akhilathuluri/">About</a></li>
+            </ul>
+        </div>
+
+    <script src="texttospeech.js"></script>
+    <script>
+        const menuToggle = document.querySelector('.toggle')
+        const showcase = document.querySelector('.showcase')
+    
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active')
+            showcase.classList.toggle('active')
+        })
+
+        
+    </script>
+</body>
+</html>
